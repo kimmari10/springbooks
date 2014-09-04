@@ -5,26 +5,38 @@ body {
     padding: 40px 15px;
     text-align: center;
 }
-.mygrid a.cover {
-height:150px;
-    width: 100%;
-    overflow: hidden;
-    float: left;
-    display: block;
-    margin-right: 3px;
-    margin-bottom: 25px;
-}
 
-a.bigCover {
-    height:300px;
-    width: 100%;
-    overflow: hidden;
-    float: left;
+a.cover img{
     display: block;
-    margin-right: 3px;
-    margin-bottom: 25px;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    width: auto;
+    height : 200px;
+    max-height: 100%;
+    max-width: 100%;
+
 }
 
 table.reviews p, h3{
     padding-left: 5px;
+}
+
+
+a.photo img {
+    width: auto;
+    height : auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+img.icon {
+    width: auto;
+    height : 80px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.list-noborder {
+    border: 0px !important;
+    border: 0px !important;
 }

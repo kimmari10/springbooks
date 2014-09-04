@@ -1,6 +1,7 @@
 package edu.guivan.springbooks.model;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -10,6 +11,9 @@ public class Author {
     private long id;
     private String name;
     private Set<Book> books;
+    private Date born;
+    // ISO 3166-1 alpha-2 charcode
+    private String country;
 
     @Id
     @Column(name="id_author")
@@ -37,5 +41,21 @@ public class Author {
 
     public void setBooks(Set<Book> books) {
         this.books = books;
+    }
+
+    public Date getBorn() {
+        return born;
+    }
+
+    public void setBorn(Date born) {
+        this.born = born;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }

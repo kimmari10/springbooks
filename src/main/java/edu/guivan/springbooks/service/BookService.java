@@ -15,7 +15,7 @@ import java.util.List;
 public class BookService {
 
     @Autowired @Qualifier("bookDao")
-    private GenericDao dao;
+    private GenericDao<Book, Long> dao;
 
 
     public List<Book> getLatestBooks(){
@@ -25,7 +25,7 @@ public class BookService {
 
     @Transactional
     public Book getBook(Long id){
-        Book book = (Book)dao.read(id);
+        Book book = dao.read(id);
         Hibernate.initialize(book.getAuthor());
         return book;
     }
